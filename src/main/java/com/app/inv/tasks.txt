@@ -1,0 +1,6 @@
+1.add business via UI.
+2.send requests to the relevant businesses by category and location....
+3.send notification to the relevant business by category and location...
+4.add response api and save it in the responses table.
+5.add dedicated UI page for that(for 4)
+6.add requests panel in the UI and load all responses by device id. (new api?).
