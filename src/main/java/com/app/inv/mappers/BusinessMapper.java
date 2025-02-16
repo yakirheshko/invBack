@@ -1,10 +1,13 @@
-package com.app.inv.mappers.business;
+package com.app.inv.mappers;
 
-import com.app.inv.contracts.business.CreateBusinessRequest;
-import com.app.inv.contracts.business.CreateBusinessResponse;
-import com.app.inv.repository.business.dto.BusinessDTO;
+import com.app.inv.contracts.business.*;
+import com.app.inv.repository.dto.BusinessDTO;
+import com.app.inv.repository.dto.RequestDTO;
 import com.app.inv.service.context.business.CreateBusinessContext;
+import com.app.inv.service.context.business.ResponseContext;
 import org.mapstruct.*;
+
+import java.util.List;
 
 //remove unneeded mapping after fix lombok?
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING,
@@ -16,6 +19,7 @@ public interface BusinessMapper {
     @Mapping(target = "category", source = "category")
     @Mapping(target = "location", source = "location")
     CreateBusinessContext mapCreateBusinessRequestToCreateBusinessContext(CreateBusinessRequest createBusinessRequest);
+
 
     @Mapping(target = "deviceId", source = "deviceId")
     @Mapping(target = "category", source = "category")

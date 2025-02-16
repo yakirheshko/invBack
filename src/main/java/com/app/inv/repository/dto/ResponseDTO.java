@@ -1,4 +1,4 @@
-package com.app.inv.repository.business.dto;
+package com.app.inv.repository.dto;
 
 import jakarta.persistence.*;
 import lombok.RequiredArgsConstructor;
@@ -10,8 +10,8 @@ import java.time.Instant;
 
 @Entity
 @RequiredArgsConstructor
-@Table(name = "businesses")
-public class BusinessDTO {
+@Table(name = "responses")
+public class ResponseDTO {
 
     @Id
     @GeneratedValue(generator = "uuid2")
@@ -30,21 +30,41 @@ public class BusinessDTO {
     @Column(name = "device_id")
     private String deviceId;
 
-    @Column(name = "category")
-    private String category;
+    @Column(name = "request_id")
+    private String requestId;
 
-    @Column(name = "location")
-    private String location;
+    @Column(name = "response")
+    private String response;
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setResponse(String response) {
+        this.response = response;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    public String getRequestId() {
+        return requestId;
+    }
+
+    public String getResponse() {
+        return response;
     }
 }

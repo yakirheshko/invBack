@@ -1,0 +1,1 @@
+ALTER TABLE businesses ADD CONSTRAINT device_id_unique UNIQUE (device_id);

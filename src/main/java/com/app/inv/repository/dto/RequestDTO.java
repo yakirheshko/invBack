@@ -1,4 +1,4 @@
-package com.app.inv.repository.customer.dto;
+package com.app.inv.repository.dto;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -38,6 +38,30 @@ public class RequestDTO {
 
     @Column(name = "area")
     private String area;
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getArea() {
+        return area;
+    }
 
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
