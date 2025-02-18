@@ -8,7 +8,24 @@ public class Request {
     private String requestDeviceId;
     private String category;
     private String description;
-    private String area;
+    private String title;
+    private String distance;
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDistance() {
+        return distance;
+    }
 
     public void setId(String id) {
         this.id = id;
@@ -26,10 +43,6 @@ public class Request {
         this.description = description;
     }
 
-    public void setArea(String area) {
-        this.area = area;
-    }
-
     public String getId() {
         return id;
     }
@@ -44,9 +57,5 @@ public class Request {
 
     public String getDescription() {
         return description;
-    }
-
-    public String getArea() {
-        return area;
     }
 }

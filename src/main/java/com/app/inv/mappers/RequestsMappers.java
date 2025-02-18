@@ -18,19 +18,22 @@ public interface RequestsMappers {
     @Mapping(target = "deviceId", source = "deviceId")
     @Mapping(target = "category", source = "category")
     @Mapping(target = "description", source = "description")
-    @Mapping(target = "area", source = "area")
+    @Mapping(target = "distance", source = "distance")
+    @Mapping(target = "title", source = "title")
     AskContext mapAskRequestToAskContext(AskRequest askRequest);
 
     @Mapping(target = "deviceId", source = "deviceId")
     @Mapping(target = "category", source = "category")
     @Mapping(target = "description", source = "description")
-    @Mapping(target = "area", source = "area")
+    @Mapping(target = "distance", source = "distance")
+    @Mapping(target = "title", source = "title")
     RequestDTO mapAskContextToRequestDTO(AskContext askContext);
 
     @Mapping(target = "deviceId", source = "deviceId")
     @Mapping(target = "category", source = "category")
     @Mapping(target = "description", source = "description")
-    @Mapping(target = "area", source = "area")
+    @Mapping(target = "distance", source = "distance")
+    @Mapping(target = "title", source = "title")
     AskResponse mapRequestDTOToAskResponse(RequestDTO requestDTO);
 
     @Mapping(target = "requestDeviceId", source = "deviceId")

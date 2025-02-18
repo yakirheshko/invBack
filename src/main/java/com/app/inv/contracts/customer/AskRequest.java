@@ -10,6 +10,17 @@ import lombok.Getter;
 public class AskRequest {
     private String deviceId;
     private String category;
+    private String description;
+    private String title;
+    private String distance;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDistance() {
+        return distance;
+    }
 
     public String getDeviceId() {
         return deviceId;
@@ -22,11 +33,4 @@ public class AskRequest {
     public String getDescription() {
         return description;
     }
-
-    public String getArea() {
-        return area;
-    }
-
-    private String description;
-    private String area;
 }

@@ -13,7 +13,16 @@ public class AskResponse {
     private String deviceId;
     private String category;
     private String description;
-    private String area;
+    private String title;
+    private String distance;
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
 
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
@@ -25,9 +34,5 @@ public class AskResponse {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public void setArea(String area) {
-        this.area = area;
     }
 }

@@ -33,14 +33,44 @@ public class RequestDTO {
     @Column(name = "category")
     private String category;
 
+    @Column(name = "title")
+    private String title;
+
     @Column(name = "description")
     private String description;
 
-    @Column(name = "area")
-    private String area;
+    @Column(name = "distance")
+    private String distance;
+
+    @Column(name = "active")
+    private boolean active = Boolean.TRUE;
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public boolean getActive() {
+        return active;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDistance() {
+        return distance;
     }
 
     public String getId() {
@@ -59,9 +89,6 @@ public class RequestDTO {
         return description;
     }
 
-    public String getArea() {
-        return area;
-    }
 
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
@@ -75,7 +102,4 @@ public class RequestDTO {
         this.description = description;
     }
 
-    public void setArea(String area) {
-        this.area = area;
-    }
 }

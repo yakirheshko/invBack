@@ -4,9 +4,11 @@ create table if not exists requests
     created_at        datetime(6)  null,
     updated_at        datetime(6)  null,
     device_id         varchar(100) not null,
-    category          varchar(100) not null,
+    title             varchar(100) not null,
     description       varchar(100) not null,
-    area              varchar(100) not null
+    category          varchar(100) not null,
+    distance          varchar(100) not null,
+    active            bit      not null default true
 );
 
 create table if not exists responses
